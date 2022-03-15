@@ -1,7 +1,7 @@
 <template>
-  <div v-if="store.isLoading">Loading...</div>
-  <div v-else class="main-container" :class="{ 'dark-mode': store.isDarkMode }">
-    <section>
+  <div class="main-container" :class="{ 'dark-mode': store.isDarkMode }">
+    <base-loader v-if="store.isLoading"></base-loader>
+    <section v-else>
       <article>
         <main-logo></main-logo>
       </article>

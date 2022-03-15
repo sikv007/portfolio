@@ -1,5 +1,4 @@
 <template>
-  <div></div>
   <div class="icons">
     <contact-item
       v-for="item in store.getContact"
