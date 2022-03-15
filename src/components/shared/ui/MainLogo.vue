@@ -6,8 +6,8 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     x="0px"
     y="0px"
+    class="logo"
     viewBox="0 0 602.8 634.97"
-    style="enable-background: new 0 0 602.8 634.97"
     xml:space="preserve"
   >
     <g>

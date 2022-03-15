@@ -1,20 +1,28 @@
 <template>
-  <section>
-    <article>
-      <main-logo></main-logo>
-    </article>
-  </section>
+  <div v-if="store.isLoading">Loading...</div>
+  <div v-else class="main-container" :class="{ 'dark-mode': store.isDarkMode }">
+    <section>
+      <article>
+        <main-logo></main-logo>
+      </article>
+      <contact-list></contact-list>
+    </section>
+  </div>
 </template>
 
+<script setup>
+import ContactList from "../components/contact/ContactList.vue";
+import { useStore } from "../store/store";
+const store = useStore();
+store.fetchContact();
+</script>
+
 <style>
-div {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 article {
   width: 10rem;
+}
+
+i {
+  font-size: 20px;
 }
 </style>
