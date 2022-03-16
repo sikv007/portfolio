@@ -1,5 +1,5 @@
 <template>
-  <header class="container-fluid position-relative pb-5">
+  <header class="container-fluid position-relative pb-5 overflow-hidden">
     <section class="container">
       <div class="position-relative logo-container mb-5">
         <div class="d-flex justify-content-between align-items-center">

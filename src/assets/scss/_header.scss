@@ -4,6 +4,10 @@
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
 
+header {
+  height: 100%;
+}
+
 .logo-container {
   z-index: 2;
 }
@@ -14,9 +18,9 @@
 
 .gradient-container {
   z-index: 1;
-  top: 50%;
+  top: 20%;
   left: 50%;
-  transform: translate(-50%,50%);
+  transform: translate(-50%, 0%);
 }
 
 .gradient-container-circles {
