@@ -1,6 +1,5 @@
 @use "./variables";
 
-
 .button {
   background: none;
   display: inline-block;
@@ -11,6 +10,8 @@
 
   &:hover {
     transform: scale(1.05);
+    background: variables.$primary;
+    color: variables.$grey-lighter-1;
   }
 }
 
@@ -18,5 +19,11 @@
   .button {
     color: variables.$grey-lighter-1;
     border: 1px solid variables.$grey-lighter-1;
+
+    &:hover {
+      transform: scale(1.05);
+      background: variables.$grey-lighter-1;
+      color: variables.$grey-darker-2;
+    }
   }
 }

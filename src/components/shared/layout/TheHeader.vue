@@ -15,9 +15,13 @@
     </section>
     <div class="container">
       <div class="position-relative heading-container pt-5">
-        <h1 style="font-weight: bold" class="text-center w-75 mx-auto mb-5">
-          Frontend Developer and UX Designer located in Oslo, Norway
-        </h1>
+        <div class="row mb-5">
+          <div class="col col-sm-12 col-md-7 mx-auto">
+            <h1 style="font-weight: bold" class="text-center">
+              Frontend Developer and UX Designer located in Oslo, Norway
+            </h1>
+          </div>
+        </div>
         <hr class="w-50 mx-auto mb-5" />
         <contact-list></contact-list>
       </div>

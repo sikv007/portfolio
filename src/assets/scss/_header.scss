@@ -30,6 +30,7 @@ header {
   align-items: center;
   width: 100%;
   gap: 40px;
+  animation: circlesScale 8s linear infinite;
   .circle {
     height: 100px;
     width: 100px;
@@ -49,6 +50,19 @@ header {
     }
   }
 }
+
+@keyframes circlesScale {
+  0% {
+    transform: translate(0)
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 
 @include media-breakpoint-up(md) {
   .gradient-container-circles {
