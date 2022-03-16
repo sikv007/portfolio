@@ -66,11 +66,19 @@ i {
   }
 }
 
+button {
+  font-size: 0.8rem;
+}
+
 @include media-breakpoint-up(md) {
   i {
-  font-size: 2.5rem;
+    font-size: 2.5rem;
   }
   .logo {
-  width: 8rem;
-}
+    width: 8rem;
+  }
+  button {
+    font-size: 1rem;
+    
+  }
 }

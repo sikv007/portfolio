@@ -5,7 +5,7 @@ const DB_URL = "https://portolio-243b5-default-rtdb.firebaseio.com/";
 export const useStore = defineStore("store", {
   state() {
     return {
-      darkMode: false,
+      darkMode: true,
       loading: false,
       contact: [],
     };

@@ -3,27 +3,23 @@
 .button {
   background: none;
   display: inline-block;
-  color: variables.$primary;
+  background: variables.$primary;
+  color: variables.$grey-lighter-1;
   border: 1px solid variables.$primary;
   border-radius: variables.$border-radius;
   transition: all 0.5s ease-out;
 
   &:hover {
     transform: scale(1.05);
-    background: variables.$primary;
-    color: variables.$grey-lighter-1;
   }
 }
 
 .dark-mode {
   .button {
-    color: variables.$grey-lighter-1;
+    // color: variables.$grey-lighter-1;
+    background: variables.$grey-lighter-1;
+    color: variables.$grey-darker-2;
     border: 1px solid variables.$grey-lighter-1;
 
-    &:hover {
-      transform: scale(1.05);
-      background: variables.$grey-lighter-1;
-      color: variables.$grey-darker-2;
-    }
   }
 }
