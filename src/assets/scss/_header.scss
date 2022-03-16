@@ -36,6 +36,9 @@ header {
     width: 100px;
     border-radius: 50%;
     filter: blur(40px);
+    @-moz-document url-prefix() {
+      opacity: 0.3;
+    }
     &--a {
       transform: scale(4) translateX(-20px);
       background-color: variables.$primary;
