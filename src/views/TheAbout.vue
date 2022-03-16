@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container" :class="{ 'dark-mode': store.isDarkMode }">
+  <!-- <div class="main-container" :class="{ 'dark-mode': store.isDarkMode }">
     <base-loader v-if="store.isLoading"></base-loader>
     <section v-else>
       <article>
@@ -7,14 +7,14 @@
       </article>
       <contact-list></contact-list>
     </section>
-  </div>
+  </div> -->
+  <div></div>
 </template>
 
 <script setup>
-import ContactList from "../components/contact/ContactList.vue";
-import { useStore } from "../store/store";
-const store = useStore();
-store.fetchContact();
+// import ContactList from "../components/contact/ContactList.vue";
+// import { useStore } from "../store/store";
+// const store = useStore();
 </script>
 
 <style>

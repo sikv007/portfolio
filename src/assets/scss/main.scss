@@ -1,20 +1,18 @@
+@use "./variables";
+@use "./header";
+@use "./button";
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
-// @import "../node_modules/bootstrap/scss/functions";
-// @import "../node_modules/bootstrap/scss/variables";
-// @import "../node_modules/bootstrap/scss/mixins";
-// @import "../node_modules/bootstrap/scss/containers";
-// @import "../node_modules/bootstrap/scss/grid";
-
-$backgorund-dark: #171717;
-$backgorund-light: #fafafa;
-$primary: #7c3aed;
-$secondary: #4f46e5;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/utilities/api";
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
 
 body {
   font-family: "Inter", sans-serif;
@@ -25,59 +23,47 @@ a {
 }
 
 .main-container {
-  background-color: $backgorund-light;
+  color: variables.$backgorund-dark;
+  background-color: variables.$backgorund-light;
   transition: background-color 0.5s ease;
   height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  article {
-    width: 10rem;
-  }
 }
 
 i {
-  font-size: 2rem;
-  color: $primary;
+  font-size: 3rem;
+  color: variables.$backgorund-dark;
   transition: all 0.5s ease;
   display: block;
 
   &:hover {
-    color: $secondary;
+    color: variables.$secondary;
     transform: scale(1.1);
   }
 }
 
 .shadow {
-  box-shadow: 0px 0px 10px 0px $backgorund-dark;
+  box-shadow: 0px 0px 10px 0px variables.$backgorund-dark;
 }
 
 .logo {
-  fill: $backgorund-dark;
+  fill: variables.$backgorund-dark;
   transition: fill 0.5s ease;
+  width: 8rem;
 }
 
-.circle {
-  animation: animateLogo 2s ease;
-}
-
-@keyframes animateLogo {
-  0% {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
 .dark-mode {
   &.main-container {
-    background-color: $backgorund-dark;
+    background-color: variables.$backgorund-dark;
+    color: variables.$backgorund-light;
   }
   .logo {
-    fill: $backgorund-light;
+    fill: variables.$backgorund-light;
+  }
+  i {
+    color: variables.$backgorund-light;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }

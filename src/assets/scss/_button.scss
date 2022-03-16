@@ -1,0 +1,21 @@
+@use "./variables";
+
+.button {
+  background: none;
+  display: inline-block;
+  color: variables.$primary;
+  border: 1px solid variables.$primary;
+  border-radius: variables.$border-radius;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.dark-mode {
+  .button {
+    color: variables.$backgorund-light;
+    border: 1px solid variables.$backgorund-light;
+  }
+}

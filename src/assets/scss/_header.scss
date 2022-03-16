@@ -1,0 +1,52 @@
+@use "./variables";
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+.logo-container {
+  z-index: 2;
+}
+
+.heading-container {
+  z-index: 2;
+}
+
+.gradient-container {
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.gradient-container-circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 40px;
+  .circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    filter: blur(40px);
+    &--a {
+      transform: scale(4) translateX(-20px);
+      background-color: variables.$primary;
+    }
+    &--b {
+      transform: scale(2) translateX(0px);
+      background-color: variables.$green;
+    }
+    &--c {
+      transform: scale(3) translateX(20px);
+      background-color: variables.$blue;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .gradient-container-circles {
+    gap: 200px;
+  }
+}

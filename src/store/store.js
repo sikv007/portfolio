@@ -20,6 +20,12 @@ export const useStore = defineStore("store", {
       this.darkMode = !this.darkMode;
       console.log(this.darkMode);
     },
+    setState() {
+      const currentState = JSON.parse(localStorage.getItem("state"));
+      if (currentState) {
+        this.darkMode = currentState.darkMode;
+      }
+    },
     async fetchContact() {
       this.loading = true;
       const res = await fetch(`${DB_URL}contact.json`);
