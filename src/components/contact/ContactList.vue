@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="d-flex justify-content-between w-50 mx-auto">
+  <div class="container px-5">
+    <div class="d-flex w-50 mx-auto gap-5 justify-content-center">
       <contact-item
         v-for="item in store.getContact"
         :key="item.title"

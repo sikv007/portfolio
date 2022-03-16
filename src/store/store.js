@@ -18,7 +18,6 @@ export const useStore = defineStore("store", {
   actions: {
     setDarkMode() {
       this.darkMode = !this.darkMode;
-      console.log(this.darkMode);
     },
     setState() {
       const currentState = JSON.parse(localStorage.getItem("state"));

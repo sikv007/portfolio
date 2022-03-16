@@ -13,8 +13,14 @@
         </div>
       </div>
     </section>
-    <div class="position-relative heading-container">
-      <contact-list></contact-list>
+    <div class="container">
+      <div class="position-relative heading-container pt-5">
+        <h1 style="font-weight: bold" class="text-center w-75 mx-auto mb-5">
+          Frontend Developer and UX Designer located in Oslo, Norway
+        </h1>
+        <hr class="w-50 mx-auto mb-5" />
+        <contact-list></contact-list>
+      </div>
     </div>
     <div class="position-absolute gradient-container">
       <div class="gradient-container-circles">
