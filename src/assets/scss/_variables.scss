@@ -1,5 +1,10 @@
 $backgorund-dark: #171717;
 $backgorund-light: #fafafa;
+$grey: #e5e5e5;
+$grey-darker-1: darken($grey, 25%);
+$grey-darker-2: darken($grey, 85%);
+$grey-lighter-1: lighten($grey, 15%);
+$grey-lighter-2: lighten($grey, 50%);
 $primary: #7c3aed;
 $secondary: #4f46e5;
 $green: #10b981;

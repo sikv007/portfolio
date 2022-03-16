@@ -23,15 +23,15 @@ a {
 }
 
 .main-container {
-  color: variables.$backgorund-dark;
-  background-color: variables.$backgorund-light;
+  color: variables.$grey-darker-2;
+  background-color: variables.$grey-lighter-1;
   transition: background-color 0.5s ease;
   height: 100vh;
 }
 
 i {
-  font-size: 2.5rem;
-  color: variables.$backgorund-dark;
+  font-size: 2rem;
+  color: variables.$grey-darker-2;
   transition: all 0.5s ease;
   display: block;
 
@@ -41,27 +41,36 @@ i {
 }
 
 .shadow {
-  box-shadow: 0px 0px 10px 0px variables.$backgorund-dark;
+  box-shadow: 0px 0px 10px 0px variables.$grey-darker-2;
 }
 
 .logo {
-  fill: variables.$backgorund-dark;
+  fill: variables.$grey-darker-2;
   transition: fill 0.5s ease;
-  width: 8rem;
+  width: 6rem;
 }
 
 .dark-mode {
   &.main-container {
-    background-color: variables.$backgorund-dark;
-    color: variables.$backgorund-light;
+    background-color: variables.$grey-darker-2;
+    color: variables.$grey-lighter-1;
   }
   .logo {
-    fill: variables.$backgorund-light;
+    fill: variables.$grey-lighter-1;
   }
   i {
-    color: variables.$backgorund-light;
+    color: variables.$grey-lighter-1;
   }
   hr {
-    border-color: variables.$backgorund-dark;
+    border-color: variables.$grey-darker-2;
   }
+}
+
+@include media-breakpoint-up(md) {
+  i {
+  font-size: 2.5rem;
+  }
+  .logo {
+  width: 8rem;
+}
 }
