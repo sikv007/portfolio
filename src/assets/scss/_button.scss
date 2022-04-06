@@ -1,6 +1,6 @@
 @use "./variables";
 
-.button {
+.btn {
   background: none;
   display: inline-block;
   background: variables.$primary;
@@ -9,13 +9,17 @@
   border-radius: variables.$border-radius;
   transition: all 0.5s ease-out;
 
+  &--dark-mode {
+    width: 140px;
+  }
+
   &:hover {
     transform: scale(1.05);
   }
 }
 
 .dark-mode {
-  .button {
+  .btn {
     // color: variables.$grey-lighter-1;
     background: variables.$grey-lighter-1;
     color: variables.$grey-darker-2;

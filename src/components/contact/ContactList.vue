@@ -30,6 +30,7 @@ const store = useStore();
 .contact-enter-from {
   opacity: 0;
   transform: translateY(20px);
+  -webkit-transform: translateY(20px);
 }
 .contact-leave-to {
   opacity: 0;
@@ -41,6 +42,9 @@ const store = useStore();
 }
 .contact-enter-active,
 .contact-leave-active {
-  transition: all 0.5s ease;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 </style>

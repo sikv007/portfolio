@@ -1,6 +1,7 @@
 @use "./variables";
 @use "./header";
 @use "./button";
+@use "./loader";
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap");
 @import "../node_modules/bootstrap/scss/functions";
@@ -64,6 +65,13 @@ i {
   hr {
     border-color: variables.$grey-darker-2;
   }
+  .loader {
+    div {
+      border: 8px solid variables.$grey-lighter-1;
+      border-color: variables.$grey-lighter-1 transparent transparent
+        transparent;
+    }
+  }
 }
 
 button {
@@ -79,6 +87,5 @@ button {
   }
   button {
     font-size: 1rem;
-    
   }
 }

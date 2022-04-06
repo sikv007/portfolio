@@ -4,7 +4,7 @@
       <div class="position-relative logo-container mb-5">
         <div class="d-flex justify-content-between align-items-center">
           <main-logo :class="{ logo: true }"></main-logo>
-          <base-button @click="store.setDarkMode">
+          <base-button @click="store.setDarkMode" class="btn--dark-mode">
             <transition mode="out-in" name="darkmode">
               <div v-if="!store.isDarkMode">Dark Mode</div>
               <div v-else>Light Mode</div>
