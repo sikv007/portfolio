@@ -1,18 +1,17 @@
 import { defineStore } from "pinia";
-
-const DB_URL = "https://portolio-243b5-default-rtdb.firebaseio.com/";
+import { API_URL } from "../config";
 
 export const useStore = defineStore("store", {
   state() {
     return {
       darkMode: true,
-      loading: false,
-      contact: [],
+      contact: {
+        isLoading: false,
+      },
     };
   },
   getters: {
     isDarkMode: (state) => state.darkMode,
-    isLoading: (state) => state.loading,
     getContact: (state) => state.contact,
   },
   actions: {
@@ -26,11 +25,12 @@ export const useStore = defineStore("store", {
       }
     },
     async fetchContact() {
-      this.loading = true;
-      const res = await fetch(`${DB_URL}contact.json`);
-      const data = await res.json();
-      this.contact = data;
-      this.loading = false;
+      this.contact.isLoading = true;
+      const res = await fetch(`${API_URL}socials`);
+      if (!res.ok) throw new Error("Det oppsto en feil... Prøv igjen senere");
+      const { data } = await res.json();
+      this.contact.data = data.socials;
+      this.contact.isLoading = false;
     },
   },
 });
