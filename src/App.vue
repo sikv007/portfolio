@@ -15,10 +15,15 @@ import { useStore } from "./store/store";
 const store = useStore();
 store.setState();
 store.fetchContact();
+store.fetchAbout();
 store.$subscribe((_, state) => {
   const currentSate = {
     darkMode: state.darkMode,
   };
   localStorage.setItem("state", JSON.stringify(currentSate));
+
+  if (!state.contact.isLoading && !state.about.isLoading) state.loading = false;
 });
 </script>
+
+<style scoped></style>

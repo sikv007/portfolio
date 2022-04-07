@@ -1,22 +1,14 @@
 <template>
   <div class="container px-5">
-    <transition name="contact" mode="out-in">
-      <div
-        v-if="store.getContact.isLoading"
-        class="d-flex w-50 mx-auto gap-5 justify-content-center"
-      >
-        <base-loader></base-loader>
-      </div>
-      <div v-else class="d-flex w-50 mx-auto gap-5 justify-content-center">
-        <contact-item
-          v-for="item in store.getContact.data"
-          :key="item.title"
-          :icon="item.icon"
-          :type="item.type"
-          :url="item.url"
-        ></contact-item>
-      </div>
-    </transition>
+    <div class="d-flex w-50 mx-auto gap-5 justify-content-center">
+      <contact-item
+        v-for="item in store.getContact.data"
+        :key="item.title"
+        :icon="item.icon"
+        :type="item.type"
+        :url="item.url"
+      ></contact-item>
+    </div>
   </div>
 </template>
 
@@ -44,7 +36,5 @@ const store = useStore();
 .contact-leave-active {
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 }
 </style>

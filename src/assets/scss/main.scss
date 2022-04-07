@@ -2,6 +2,7 @@
 @use "./header";
 @use "./button";
 @use "./loader";
+@use "./splash";
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap");
 @import "../node_modules/bootstrap/scss/functions";
@@ -55,6 +56,9 @@ i {
   &.main-container {
     background-color: variables.$grey-darker-2;
     color: variables.$grey-lighter-1;
+  }
+  .splash {
+    background-color: variables.$grey-darker-2;
   }
   .logo {
     fill: variables.$grey-lighter-1;

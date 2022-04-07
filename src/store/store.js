@@ -5,7 +5,11 @@ export const useStore = defineStore("store", {
   state() {
     return {
       darkMode: true,
+      loading: true,
       contact: {
+        isLoading: false,
+      },
+      about: {
         isLoading: false,
       },
     };
@@ -13,6 +17,8 @@ export const useStore = defineStore("store", {
   getters: {
     isDarkMode: (state) => state.darkMode,
     getContact: (state) => state.contact,
+    getAbout: (state) => state.about,
+    isLoading: (state) => state.loading,
   },
   actions: {
     setDarkMode() {
@@ -27,10 +33,16 @@ export const useStore = defineStore("store", {
     async fetchContact() {
       this.contact.isLoading = true;
       const res = await fetch(`${API_URL}socials`);
-      if (!res.ok) throw new Error("Det oppsto en feil... Prøv igjen senere");
       const { data } = await res.json();
       this.contact.data = data.socials;
       this.contact.isLoading = false;
+    },
+    async fetchAbout() {
+      this.about.isLoading = true;
+      const res = await fetch(`${API_URL}about`);
+      const { data } = await res.json();
+      this.about.data = data.about[0];
+      this.about.isLoading = false;
     },
   },
 });
