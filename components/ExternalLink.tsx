@@ -7,13 +7,14 @@ interface ExternalLinkProps {
 }
 
 export function ExternalLink({ href, children, mode = "primary" }: ExternalLinkProps) {
+
   const modeClasses = {
-    primary: 'text-purple-500 hover:text-purple-600',
-    secondary: 'text-green-400 hover:text-green-500',
+    primary: 'bg-white text-neutral-900',
+    secondary: 'bg-transparent text-white',
   };
 
   return (
-    <a className={twJoin(modeClasses[mode])} href={href} target='_blank'>
+    <a className={twJoin(modeClasses[mode], "group flex gap-2 rounded-sm py-2 border border-white items-center justify-center w-32 transition-all hover:bg-purple-500 hover:border-purple-500 hover:text-white")} href={href} target='_blank'>
       {children}
     </a>
   );

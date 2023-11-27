@@ -1,6 +1,6 @@
 export function Logo() {
   return (
-    <div className="ml-8">
+    <div className="ml-8 relative z-10">
       <svg width='111' height='117' viewBox='0 0 111 117' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <g clip-path='url(#clip0_9_10)'>
           <path
